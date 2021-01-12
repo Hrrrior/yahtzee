@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Leaderboard</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='script.js'></script>
+</head>
+<body onload="sortLeaderboard()">
+    <div class="leader-box">
+      <div id="box" class="box">
+          <div class="leaderboard-form">
+              <label for="sort">Sort by:</label>
+              <select id="sort" name="sort">
+                <option value="name">Name A-Z</option>
+                <option value="name-desc">Name Z-A</option>
+                <option value="score">Score Ascending</option>
+                <option value="score-desc">Score Descending</option>
+              </select>
+              <button onclick="sortLeaderboard()">Sort</button>
+            </div>
+            <ol id="leaderboard" class="leaderboard"> </ol>
+      </div>
+    </div>
+</body>
+</html>

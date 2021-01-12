@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Frontpage</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+  <script src='script.js'></script>
+</head>
+<body>
+    <div>
+        <div class="input-box">
+                <label>Player name:</label>
+                <input type="text" id="name" maxlength="12">
+            <button onclick="addPlayer()">Add Player</button>
+            <form>
+                <label>How many rounds?</label>
+                <input type="radio" name="choice" value="3" checked> 3
+                <input type="radio" name="choice" value="8"> 8
+                <input type="radio" name="choice" value="13"> 13
+            </form>  
+            <button id="start-game-button" onclick="gameBegin()" disabled>Start Game</button>
+        </div>
+        <ol id="current-players" class="current-players"></ol>
+    </div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+	<title>Yahtzee</title>
+	<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+	<link href='style.css' media='screen' rel='stylesheet' type='text/css'>
+	<script src='script.js'>
+	</script>
+</head>
+<body onload="setUp()">
+
+  <div class="wrapper">
+    <div class="header">YAHTZEEEE!!!</div>
+  </div>
+
+	<div class="wrapper">
+    <div>
+      <table class="comboTableStyle">
+        <thead>
+          <tr>
+            <th colspan="2">Combos</th>
+          </tr>
+        </thead>
+        <tbody id="comboTable">
+          <tr id="comb0">
+            <td>Joker</td>
+            <td><label><input name="optradio" type="radio" value="Joker"></label></td>
+          </tr>
+          <tr id="comb1">
+            <td>One</td>
+            <td><label><input name="optradio" type="radio" value="1"></label></td>
+          </tr>
+          <tr id="comb2">
+            <td>Two</td>
+            <td><label><input name="optradio" type="radio" value="2"></label></td>
+          </tr>
+          <tr id="comb3">
+            <td>Three</td>
+            <td><label><input name="optradio" type="radio" value="3"></label></td>
+          </tr>
+          <tr id="comb4">
+            <td>Four</td>
+            <td><label><input name="optradio" type="radio" value="4"></label></td>
+          </tr>
+          <tr id="comb5">
+            <td>Five</td>
+            <td><label><input name="optradio" type="radio" value="5"></label></td>
+          </tr>
+          <tr id="comb6">
+            <td>Six</td>
+            <td><label><input name="optradio" type="radio" value="6"></label></td>
+          </tr>
+
+          <tr id="comb7">
+            <td>3 of kind</td>
+            <td><label><input name="optradio" type="radio" value="3ofKind"></label></td>
+          </tr>
+
+          <tr id="comb8">
+            <td>4 of kind</td>
+            <td><label><input name="optradio" type="radio" value="4ofKind"></label></td>
+          </tr>
+
+
+          <tr id="comb9">
+            <td>Small Straight</td>
+            <td><label><input name="optradio" type="radio" value="sstraight"></label></td>
+          </tr>
+
+          <tr id="comb10">
+            <td>Large Straight</td>
+            <td><label><input name="optradio" type="radio" value="lstraight"></label></td>
+          </tr>
+
+          <tr id="comb11">
+            <td>Yahtzee</td>
+            <td><label><input name="optradio" type="radio" value="yahtzee"></label></td>
+          </tr>
+
+          <tr id="comb12">
+            <td>Full House</td>
+            <td><label><input name="optradio" type="radio" value="fullHouse"></label></td>
+          </tr>
+
+        </tbody>
+      </table><button id="next-turn-button" onclick="nextPlayer()" type="button" value="Choose Combo" disabled>Choose combo</button>
+    </div>
+    
+    <div id="dice-container">
+      <div class="roll-dice" id="roll-dice" onclick="rollDice()"></div>
+    </div>
+
+    <div class="scoreboard">
+      <table id="scoreboard">
+        <thead id="scoreboard-head"></thead>
+        <tbody id="scoreboard-body"></tbody>
+      </table>
+      
+        <div>
+          <div class="turn-counter" id="turn-counter"></div>
+        </div>
+      </div>
+    
+    </div>
+	<div class="game-over" id="game-over"></div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+	<title>Yahtzee</title>
+	<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+	<link href='style.css' media='screen' rel='stylesheet' type='text/css'>
+	<script src='script.js'>
+	</script>
+</head>
+<body onload="setUp()">
+  <header>
+    <h1><a href="https://yatzy-yahtzeeeee.dk/en/the-13-different-combinations/" target="_blank">YAHTZEEEE!!!</a></h1>
+  </header>
+	<div class="wrapper">
+    <div>
+      <table class="comboTableStyle">
+        <thead>
+          <tr>
+            <th colspan="2">Combos</th>
+          </tr>
+        </thead>
+
+
+        <tbody id="comboTable">
+
+          <tr id="comb0">
+            <td>Joker/Chance</td>
+            <td><input name="optradio" type="radio" value="Joker"></td>
+          </tr>
+          <tr id="comb1">
+            <td>Sum of Ones</td>
+            <td><input name="optradio" type="radio" value="1"></td>
+          </tr>
+          <tr id="comb2">
+            <td>Sum of Twos</td>
+            <td><input name="optradio" type="radio" value="2"></td>
+          </tr>
+          <tr id="comb3">
+            <td>Sum of Threes</td>
+            <td><input name="optradio" type="radio" value="3"></td>
+          </tr>
+          <tr id="comb4">
+            <td>Sum of Fours</td>
+            <td><input name="optradio" type="radio" value="4"></td>
+          </tr>
+          <tr id="comb5">
+            <td>Sum of Fives</td>
+            <td><input name="optradio" type="radio" value="5"></td>
+          </tr>
+          <tr id="comb6">
+            <td>Sum of Sixes</td>
+            <td><input name="optradio" type="radio" value="6"></td>
+          </tr>
+
+          <tr id="comb7">
+            <td>3 of a Kind</td>
+            <td><input name="optradio" type="radio" value="3ofKind"></td>
+          </tr>
+
+          <tr id="comb8">
+            <td>4 of a Kind</td>
+            <td><input name="optradio" type="radio" value="4ofKind"></td>
+          </tr>
+
+
+          <tr id="comb9">
+            <td>Small Straight</td>
+            <td><input name="optradio" type="radio" value="sstraight"></td>
+          </tr>
+
+          <tr id="comb10">
+            <td>Large Straight</td>
+            <td><input name="optradio" type="radio" value="lstraight"></td>
+          </tr>
+
+          <tr id="comb11">
+            <td>Yahtzee</td>
+            <td><input name="optradio" type="radio" value="yahtzee"></td>
+          </tr>
+
+          <tr id="comb12">
+            <td>Full House</td>
+            <td><input name="optradio" type="radio" value="fullHouse"></td>
+          </tr>
+
+        </tbody>
+
+
+      </table>
+      
+      <button id="next-turn-button" class="wider-button" onclick="nextPlayer()" type="button" value="Choose Combo" disabled>Choose Combo</button>
+    </div>
+    <div id="dice-container">
+      <div class="roll-dice" id="roll-dice" onclick="rollDice()"></div>
+    </div>
+
+    <div class="scoreboard">
+      <table id="scoreboard">
+        <thead id="scoreboard-head"></thead>
+        <tbody id="scoreboard-body"></tbody>
+      </table>
+
+        <div class="turn-counter" id="turn-counter"></div>
+
+      <audio controls>
+        <source src="audio/MyTrains.mp3">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    
+    </div>
+  <div class="game-over" id="game-over"></div>
+  
+</body>
+</html>
