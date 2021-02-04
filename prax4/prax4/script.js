@@ -9,8 +9,7 @@ let localPlayer;
 let winner;
 let playerAdded = false;
 
-// let API_PORT = 'http://localhost:6042/';
-let API_PORT = 'http://turing.cs.ttu.ee:6042/';
+let API_PORT = '';
 function updateLobby() {
 	console.log("here");
 	let dataLoc;

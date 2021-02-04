@@ -1,17 +1,10 @@
 var mysql = require('mysql2');
 
-// var con = mysql.createConnection({
-//     host: "localhost",
-//     user: "root",
-//     password: "",
-//     database: "heheli"
-// });
-
 var con = mysql.createConnection({
     host: "localhost",
-    user: "s_heheli",
-    password: "7OiLT2ya",
-    database: "heheli"
+    user: "",
+    password: "",
+    database: ""
 });
 
 con.connect(function(err) {
@@ -37,16 +30,5 @@ function insertData(winner) {
         });
 }
 
-// function getLeaderboard() {
-//     console.log("Connected! leader");
-//     var sql = "SELECT * FROM leaderboard ORDER BY created_at DESC limit 10";
-//     let rs = null;
-//     con.query(sql, function (err, result) {
-//         if (err) throw err;
-//         console.log("res" + JSON.stringify(result));
-//         rs = result;
-//     });
-//     return rs
-// }
 exports.insertData = insertData;
 exports.con = con;
